@@ -1,0 +1,8 @@
+{
+  "name": "Notion Todo",
+  "icon": "checkmark.seal.fill",
+  "iconImage": "app-icon.png",
+  "color": "#2563EB",
+  "version": "1.0.0",
+  "runInApp": true
+}

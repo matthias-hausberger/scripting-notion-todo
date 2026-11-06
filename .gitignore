@@ -1,0 +1,7 @@
+.DS_Store
+node_modules/
+dist/
+*.scripting
+.env
+.env.*
+_tmp/
