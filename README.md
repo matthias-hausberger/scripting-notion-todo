@@ -24,13 +24,10 @@ An offline-first task app for iOS that uses a Notion database as its backend. It
 
 Requires an iPhone with the Scripting app.
 
-1. Build the import package (or download it from the releases page, if one is published):
-   ```sh
-   ./scripts/package.sh
-   ```
-   This creates `dist/Notion Todo.scripting`, a zip with `script.json` and `index.tsx` at its root.
-2. AirDrop the file to your iPhone, open it, and choose Scripting. The import sets the script up as an app (`runInApp`), so it opens as a screen.
-3. Open **Notion Todo** and tap **Configure Notion**:
+1. On your iPhone, open the [stable Scripting import link](scripting://import_scripts?urls=https%3A%2F%2Fgithub.com%2Fmatthias-hausberger%2Fscripting-notion-todo%2Ftree%2Fstable%2Fapp). It imports the `app/` script from the `stable` branch of the [public GitHub repository](https://github.com/matthias-hausberger/scripting-notion-todo). Stable receives official releases only.
+2. To try a prerelease, use the [beta import link](scripting://import_scripts?urls=https%3A%2F%2Fgithub.com%2Fmatthias-hausberger%2Fscripting-notion-todo%2Ftree%2Fbeta%2Fapp), which tracks the `beta` branch. To try the latest development version, use the [edge import link](scripting://import_scripts?urls=https%3A%2F%2Fgithub.com%2Fmatthias-hausberger%2Fscripting-notion-todo%2Ftree%2Fmain%2Fapp), which tracks `main`.
+3. To receive updates on a channel, set the matching GitHub URL as the script's remote source in Scripting's script settings. Scripting checks that branch for changes; its automatic-update setting controls whether it applies them automatically.
+4. Open **Notion Todo** in Scripting and tap **Configure Notion**:
    1. Create an integration at [notion.so/my-integrations](https://www.notion.so/my-integrations) and copy its secret (a personal access token also works). If you use an integration, share your task database with it.
    2. Paste the token under **Settings → Notion**.
    3. Open **Task database**, pick your database, map the title and status columns, and choose the **Due date column** (Quick Add writes dates there).
